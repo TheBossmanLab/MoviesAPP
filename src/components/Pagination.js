@@ -14,14 +14,15 @@ function Pagination({ pagesNr, pageUrl }) {
 				disabled={Number(page) <= 1 ? true : false}
 				to={pageUrl + (Number(page) - 1).toString()}
 				onClick={backTop}
-				className="btn hover:bg-coolGray-400 text-black btn-outline btn-wide">
+				className="btn text-base w-32 md:w-60 lg:w-80 hover:bg-coolGray-400 text-black btn-outline btn-wide">
 				Previous Page{" "}
 			</Link>{" "}
 			<Link
 				disabled={Number(page) >= pagesNr || pagesNr === 0}
 				to={pageUrl + (Number(page) + 1).toString()}
 				onClick={backTop}
-				className="btn hover:bg-coolGray-400 text-black btn-outline btn-wide">
+				className="btn text-base w-32 md:w-60 
+        lg:w-80 hover:bg-coolGray-400 text-black btn-outline btn-wide">
 				Next Page{" "}
 			</Link>{" "}
 		</div>

@@ -5,6 +5,7 @@ import config from "../config.js";
 import Pagination from "./Pagination";
 import Spinner from "./Spinner";
 import AllMovies from "./AllMovies";
+import Header from "./Header";
 
 function Page({ title }) {
 	const { input, page = 1 } = useParams();
@@ -13,8 +14,10 @@ function Page({ title }) {
 	const [movies, setMovies] = useState([]);
 	const [pageUrl, setPageUrl] = useState("/p=");
 	const [isLoading, setIsLoading] = useState(true);
+
 	useEffect(() => {
 		async function fetchData() {
+			setIsLoading(true);
 			window.scrollTo(0, 0);
 			if (!input) {
 				const resp = await get(trendingURL);
@@ -29,12 +32,15 @@ function Page({ title }) {
 		}
 		fetchData();
 	}, [input, page, searchURL, trendingURL]);
+	console.log(movies);
 
 	return (
 		<>
+			<Header> </Header>
 			<h1 className="text-3xl md:mx-5 lg:mx-8 font-bold px-7 text-white text-startmd:text-2xl 2xl:mx-32 sm:text-2xl mt-8 mb-3">
 				{" "}
-				{input ? title + input : title}{" "}
+				{!input ? title : title + input}{" "}
+				{movies.total_results === 0 ? " not found" : ""}{" "}
 			</h1>{" "}
 			<div className="flex justify-center px-7 place-items-center">
 				{" "}

@@ -1,5 +1,5 @@
-import Header from "./components/Header";
 import Page from "./components/Page";
+import NotFoundError from "./components/NotFoundError";
 import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -12,24 +12,26 @@ function App() {
 
 	return (
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
-			<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
-				<Header
-				// input={searchInput}
-				// // onClick={handleClick}
-				// onChange={handleChange}
-				/>
-				<Switch>
-					<Route onSearch={updateQueryAPI} exact path="/">
-						<Page title="Treadings this week:" />
-					</Route>
-					<Route onSearch={updateQueryAPI} exact path="/p=:page">
-						<Page title="Treadings this week:" />
-					</Route>
-					<Route exact path="/search/s=:input/p=:page">
-						<Page searchApi={queryAPI} title="Results found: " />
-					</Route>
-				</Switch>
-			</div>
+			<Switch>
+				<Route onSearch={updateQueryAPI} exact path="/">
+					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
+						<Page title="Trending this week:" />
+					</div>
+				</Route>
+				<Route onSearch={updateQueryAPI} exact path="/p=:page">
+					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
+						<Page title="Trending this week:" />
+					</div>
+				</Route>{" "}
+				<Route exact path="/search/s=:input/p=:page">
+					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
+						<Page searchApi={queryAPI} title="Results For: " />
+					</div>
+				</Route>
+				<Route>
+					<NotFoundError></NotFoundError>
+				</Route>
+			</Switch>{" "}
 		</BrowserRouter>
 	);
 }
