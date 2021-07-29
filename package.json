@@ -1,6 +1,6 @@
 {
     "name": "movie-app",
-    "homepage": "http: //TheBossmanLab.github.io/MoviesAPP",
+    "homepage": "http://TheBossmanLab.github.io/MoviesAPP",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
