@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Page from "./components/Page";
+import { useState } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [queryAPI, setQueryAPI] = useState("");
+
+	const updateQueryAPI = (searchInput) => {
+		setQueryAPI(searchInput);
+	};
+
+	return (
+		<BrowserRouter>
+			<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
+				<Header
+				// input={searchInput}
+				// // onClick={handleClick}
+				// onChange={handleChange}
+				/>
+				<Switch>
+					<Route onSearch={updateQueryAPI} exact path="/">
+						<Page title="Treadings this week:" />
+					</Route>
+					<Route onSearch={updateQueryAPI} exact path="/p=:page">
+						<Page title="Treadings this week:" />
+					</Route>
+					<Route exact path="/search/s=:input/p=:page">
+						<Page searchApi={queryAPI} title="Results found: " />
+					</Route>
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
