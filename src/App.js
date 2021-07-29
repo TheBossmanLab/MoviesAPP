@@ -11,7 +11,7 @@ function App() {
 	};
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
 				<Header
 				// input={searchInput}

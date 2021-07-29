@@ -2,7 +2,7 @@ import star from "./star.png";
 
 function Singlemovie({ movieInfo }) {
 	const basePosterUrl = "https://image.tmdb.org/t/p/w500";
-	const { title, poster_path, rating, backdrop_path } = movieInfo;
+	const { title, poster_path, vote_average } = movieInfo;
 	// console.log(`title ${title}, path ${posterUrl}, rating${rating}`);
 	console.log(movieInfo);
 	return (
@@ -24,7 +24,7 @@ function Singlemovie({ movieInfo }) {
 				<p className="pt-2 font-medium px-2 link text-black"> {title} </p>{" "}
 			</a>{" "}
 			<span className="pb-2 text-black font-semibold flex items-center justify-end pr-4">
-				<p className="inline-block text-right text-sm px-3"> {rating} </p>{" "}
+				<p className="inline-block text-right text-sm px-3"> {vote_average} </p>{" "}
 				<img
 					className="inline-block"
 					src={star}
