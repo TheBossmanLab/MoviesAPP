@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Header() {
 	const [searchInput, setSearchInput] = useState("");
 	const handleChange = (e) => {
-		console.log(e.target.value);
 		setSearchInput(e.target.value);
 	};
 	const handleClick = () => {

@@ -28,15 +28,13 @@ function Page({ title }) {
 				setPageUrl(`/search/s=${input}/p=`);
 			}
 			setIsLoading(false);
-			console.log("made request");
 		}
 		fetchData();
 	}, [input, page, searchURL, trendingURL]);
-	console.log(movies);
 
 	return (
 		<>
-			<Header> </Header>
+			<Header> </Header>{" "}
 			<h1 className="text-3xl md:mx-5 lg:mx-8 font-bold px-7 text-white text-startmd:text-2xl 2xl:mx-32 sm:text-2xl mt-8 mb-3">
 				{" "}
 				{!input ? title : title + input}{" "}

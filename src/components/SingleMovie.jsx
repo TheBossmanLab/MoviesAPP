@@ -1,10 +1,8 @@
 import star from "./star.png";
 
-function Singlemovie({ movieInfo }) {
+function SingleMovie({ movieInfo }) {
 	const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 	const { title, poster_path, vote_average } = movieInfo;
-	// console.log(`title ${title}, path ${posterUrl}, rating${rating}`);
-	console.log(movieInfo);
 	return (
 		<div className=" text-sm whitespace-pre-line text-left text-black moviecard shadow-sm bg-white rounded-xl m-4">
 			<a href="www.google.com" className="movie">
@@ -37,4 +35,4 @@ function Singlemovie({ movieInfo }) {
 	);
 }
 
-export default Singlemovie;
+export default SingleMovie;

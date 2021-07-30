@@ -1,5 +1,5 @@
-import Page from "./components/Page";
 import NotFoundError from "./components/NotFoundError";
+import BasePage from "./components/BasePage";
 import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -14,18 +14,16 @@ function App() {
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route onSearch={updateQueryAPI} exact path="/">
-					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
-						<Page title="Trending this week:" />
-					</div>
+					<BasePage />
 				</Route>
 				<Route onSearch={updateQueryAPI} exact path="/p=:page">
 					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
-						<Page title="Trending this week:" />
+						<BasePage />
 					</div>
 				</Route>{" "}
 				<Route exact path="/search/s=:input/p=:page">
 					<div className="font-poppins bg-cover min-h-screen bg-blue-900  mx-auto">
-						<Page searchApi={queryAPI} title="Results For: " />
+						<BasePage searchApi={queryAPI} />
 					</div>
 				</Route>
 				<Route>
