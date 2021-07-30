@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/MoviesAPP/static/css/main.380fa40a.chunk.css",
-    "main.js": "/MoviesAPP/static/js/main.5a677ed2.chunk.js",
-    "main.js.map": "/MoviesAPP/static/js/main.5a677ed2.chunk.js.map",
+    "main.js": "/MoviesAPP/static/js/main.fb3051d6.chunk.js",
+    "main.js.map": "/MoviesAPP/static/js/main.fb3051d6.chunk.js.map",
     "runtime-main.js": "/MoviesAPP/static/js/runtime-main.ada6efb1.js",
     "runtime-main.js.map": "/MoviesAPP/static/js/runtime-main.ada6efb1.js.map",
-    "static/js/2.c833f79a.chunk.js": "/MoviesAPP/static/js/2.c833f79a.chunk.js",
-    "static/js/2.c833f79a.chunk.js.map": "/MoviesAPP/static/js/2.c833f79a.chunk.js.map",
+    "static/js/2.9b511352.chunk.js": "/MoviesAPP/static/js/2.9b511352.chunk.js",
+    "static/js/2.9b511352.chunk.js.map": "/MoviesAPP/static/js/2.9b511352.chunk.js.map",
     "static/js/3.ead59a9f.chunk.js": "/MoviesAPP/static/js/3.ead59a9f.chunk.js",
     "static/js/3.ead59a9f.chunk.js.map": "/MoviesAPP/static/js/3.ead59a9f.chunk.js.map",
     "index.html": "/MoviesAPP/index.html",
     "static/css/main.380fa40a.chunk.css.map": "/MoviesAPP/static/css/main.380fa40a.chunk.css.map",
-    "static/js/2.c833f79a.chunk.js.LICENSE.txt": "/MoviesAPP/static/js/2.c833f79a.chunk.js.LICENSE.txt",
+    "static/js/2.9b511352.chunk.js.LICENSE.txt": "/MoviesAPP/static/js/2.9b511352.chunk.js.LICENSE.txt",
     "static/media/spinner.11d9cde8.gif": "/MoviesAPP/static/media/spinner.11d9cde8.gif",
     "static/media/star.439d6f40.png": "/MoviesAPP/static/media/star.439d6f40.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ada6efb1.js",
-    "static/js/2.c833f79a.chunk.js",
+    "static/js/2.9b511352.chunk.js",
     "static/css/main.380fa40a.chunk.css",
-    "static/js/main.5a677ed2.chunk.js"
+    "static/js/main.fb3051d6.chunk.js"
   ]
 }
