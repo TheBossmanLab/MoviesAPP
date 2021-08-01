@@ -23,7 +23,7 @@ const MovieInfoPage = () => {
 			setIsLoading(false);
 		}
 		getData();
-	}, [movieInfoURL]);
+	}, [movieInfoURL, id]);
 
 	if (data.code === 404) {
 		return <Redirect to="/404error" component={NotFoundError} />;

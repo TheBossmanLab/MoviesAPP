@@ -1,9 +1,8 @@
 import NotFoundError from "./components/NotFoundError";
 import BasePage from "./components/./moviesResults/BasePage";
 import { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import MovieInfoPage from "./components/movieInfo/MovieInfoPage";
-
 function App() {
 	const [queryAPI, setQueryAPI] = useState("");
 
@@ -12,9 +11,9 @@ function App() {
 	};
 
 	return (
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
+		<HashRouter basename={process.env.PUBLIC_URL}>
 			<Switch>
-				<Route onSearch={updateQueryAPI} exact path="/">
+				<Route onSearch={updateQueryAPI} Base exact path="/">
 					<BasePage />
 				</Route>
 				<Route onSearch={updateQueryAPI} exact path="/p=:page">
@@ -30,7 +29,7 @@ function App() {
 					<NotFoundError></NotFoundError>
 				</Route>
 			</Switch>{" "}
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
