@@ -36,20 +36,22 @@ const Footer = () => {
 							</span>
 							<div className="flex flex-col lg:text-center justify-between">
 								<span class="my-2">
-									<a href="" class="text-blue-700  text-md hover:text-blue-500">
+									<a
+										href="https://web.facebook.com/ossman.munaf"
+										class="text-blue-700  text-md hover:text-blue-500">
 										Facebook
 									</a>
 								</span>
 								<span class="my-2">
 									<a
-										href="#"
+										href="https://www.instagram.com/ossman786/"
 										class="text-blue-700  text-md hover:text-blue-500">
 										Instagram
 									</a>
 								</span>
 								<span class="my-2">
 									<a
-										href="#"
+										href="https://twitter.com/QuotesBossman"
 										class="text-blue-700  text-md hover:text-blue-500">
 										Twitter{" "}
 									</a>
@@ -63,7 +65,7 @@ const Footer = () => {
 				<div class="border-t-2 border-gray-300 flex flex-col items-center mt-3">
 					<div class="sm:w-2/3 text-center py-6">
 						<p class="text-sm text-blue-700 font-bold mb-2">
-							© 2020 by Pavlove BIOKOU
+							© 2020 by Ossman Rauf
 						</p>
 					</div>
 				</div>
