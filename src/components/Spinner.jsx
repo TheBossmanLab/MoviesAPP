@@ -1,4 +1,4 @@
-import spinner from "./spinner.gif";
+import spinner from "./img/spinner.gif";
 const Spinner = () => {
 	return (
 		<div className="self-center m-auto">

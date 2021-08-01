@@ -1,7 +1,7 @@
 function NotFoundError() {
 	return (
-		<div class="flex h-screen">
-			<div class="text-center m-auto mt-40">
+		<div className="font-poppins flex h-screen">
+			<div className="text-center m-auto mt-40">
 				<h1 className="text-2xl font-bold my-3"> ERROR: 404 </h1>{" "}
 				<h2 className="text-xl my-3 font-semibold"> Not Found </h2>{" "}
 				<h6 className="text-xl my-3 font-semibold">

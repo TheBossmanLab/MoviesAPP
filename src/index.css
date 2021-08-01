@@ -4,25 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-    .moviecard {
-        min-width: 200px;
-        max-width: 75%;
-        /* min-height: 450px; */
-        mix-height: 500px;
-    }
-    .movie {
-        min-height: 350px;
-        /* max-height: 500px; */
-    }
-    .p-tag {
-        min-height: 20px;
-    }
-    .movie-img {
-        min-height: 100%;
-    }
-    /* @media (min-width: 768px) {
-        .movieimg {
-            height: 300px;
-        }
-    } */
+	.moviecard {
+		min-width: 200px;
+		max-width: 75%;
+		/* min-height: 450px; */
+		mix-height: 500px;
+	}
+	.movie {
+		min-height: 350px;
+		/* max-height: 500px; */
+	}
+	.p-tag {
+		min-height: 20px;
+	}
+	.movie-img {
+		min-height: 100%;
+	}
 }

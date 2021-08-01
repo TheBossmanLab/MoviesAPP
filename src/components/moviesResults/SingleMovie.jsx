@@ -1,11 +1,12 @@
-import star from "./star.png";
+import star from "../img/star.png";
+import { Link } from "react-router-dom";
 
 function SingleMovie({ movieInfo }) {
 	const basePosterUrl = "https://image.tmdb.org/t/p/w500";
-	const { title, poster_path, vote_average } = movieInfo;
+	const { title, poster_path, vote_average, id } = movieInfo;
 	return (
 		<div className=" text-sm whitespace-pre-line text-left text-black moviecard shadow-sm bg-white rounded-xl m-4">
-			<a href="www.google.com" className="movie">
+			<Link to={`/movieinfo/id=${id}`} className="movie">
 				<figure className="">
 					<img
 						className="rounded-t-xl movie-img"
@@ -20,7 +21,7 @@ function SingleMovie({ movieInfo }) {
 					/>
 				</figure>{" "}
 				<p className="pt-2 font-medium px-2 link text-black"> {title} </p>{" "}
-			</a>{" "}
+			</Link>
 			<span className="pb-2 text-black font-semibold flex items-center justify-end pr-4">
 				<p className="inline-block text-right text-sm px-3"> {vote_average} </p>{" "}
 				<img
